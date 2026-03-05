@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Event Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">📅</span>
+                <span class="logo-text">EventPlan</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="calendar.html" class="nav-link active">Calendar</a></li>
+                <li class="nav-item"><a href="create-event.html" class="nav-link nav-link-btn">+ New Event</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Calendar Section -->
+    <section class="calendar-section">
+        <div class="container">
+            <div class="calendar-container">
+                <!-- Calendar Header -->
+                <div class="calendar-header">
+                    <button class="btn-nav" id="prevMonth">← Previous</button>
+                    <h2 id="monthYear"></h2>
+                    <button class="btn-nav" id="nextMonth">Next →</button>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="calendar-wrapper">
+                    <div class="calendar-grid">
+                        <div class="day-header">Sun</div>
+                        <div class="day-header">Mon</div>
+                        <div class="day-header">Tue</div>
+                        <div class="day-header">Wed</div>
+                        <div class="day-header">Thu</div>
+                        <div class="day-header">Fri</div>
+                        <div class="day-header">Sat</div>
+                        <div id="calendarDays"></div>
+                    </div>
+
+                    <!-- Event Details for Selected Date -->
+                    <div class="selected-date-events">
+                        <h3 id="selectedDateTitle">Select a date</h3>
+                        <div id="selectedDateEventsList" class="events-list">
+                            <p>No events for this date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EventPlan</h4>
+                    <p>Your personal event management solution.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@eventplan.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EventPlan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
