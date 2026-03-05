@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event - Event Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">📅</span>
+                <span class="logo-text">EventPlan</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li class="nav-item"><a href="create-event.html" class="nav-link nav-link-btn active">+ New Event</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create Event Section -->
+    <section class="create-event-section">
+        <div class="container">
+            <div class="form-container">
+                <h1>Create a New Event</h1>
+                <p class="form-subtitle">Fill in the details below to create your event</p>
+
+                <form id="eventForm" class="event-form">
+                    <div class="form-group">
+                        <label for="eventName">Event Name *</label>
+                        <input type="text" id="eventName" name="eventName" placeholder="e.g., Birthday Party" required>
+                        <span class="error-message" id="eventNameError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventDate">Date *</label>
+                            <input type="date" id="eventDate" name="eventDate" required>
+                            <span class="error-message" id="eventDateError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventTime">Time *</label>
+                            <input type="time" id="eventTime" name="eventTime" required>
+                            <span class="error-message" id="eventTimeError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventLocation">Location *</label>
+                        <input type="text" id="eventLocation" name="eventLocation" placeholder="e.g., Central Park" required>
+                        <span class="error-message" id="eventLocationError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventCategory">Category *</label>
+                        <select id="eventCategory" name="eventCategory" required>
+                            <option value="">Select a category</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="meeting">Meeting</option>
+                            <option value="school">School Activity</option>
+                            <option value="party">Party</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="eventCategoryError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDescription">Description</label>
+                        <textarea id="eventDescription" name="eventDescription" placeholder="Add details about your event..." rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventGuests">Guest List (comma-separated)</label>
+                        <textarea id="eventGuests" name="eventGuests" placeholder="e.g., John Doe, Jane Smith" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="events.html" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Create Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EventPlan</h4>
+                    <p>Your personal event management solution.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@eventplan.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EventPlan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
